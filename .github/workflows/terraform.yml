@@ -9,6 +9,14 @@ jobs:
   terraform:
     runs-on: ubuntu-latest
 
+    # Definimos tus variables aquí usando la convención TF_VAR_ de Terraform
+    env:
+      TF_VAR_project_name: "cloudbox"
+      TF_VAR_aws_region: "us-east-1"
+      TF_VAR_api_url: "https://4547pw0gbc.execute-api.us-east-1.amazonaws.com/dev"
+      TF_VAR_user_pool_id: "us-east-1_t87WKjDDw"
+      TF_VAR_client_id: "6v0gclhlnjdspuf6rlaed3b2ud"
+
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -38,4 +46,4 @@ jobs:
         run: terraform plan
 
       - name: Terraform Apply 
-        run: terraform apply -auto-approve 
+        run: terraform apply -auto-approve
