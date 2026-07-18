@@ -1,4 +1,4 @@
-# Laboratorio 10 CI/CD     
+# Laboratorio 10 CI/CD  
 
 module "dynamodb" {
   source = "./modules/dynamodb"
