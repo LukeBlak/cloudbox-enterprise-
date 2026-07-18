@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "terraform_backend" { 
- bucket = "cloudbox-terraform-state-35671859" 
+ bucket = "cloudbox-terraform-state-58769423" 
 } 
 
 resource "aws_s3_bucket_versioning" "terraform_backend_versioning" { 
